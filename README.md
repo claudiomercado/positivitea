@@ -1,5 +1,9 @@
-# positivitea
+# PositiviTea
 Proyecto "POSITIVITEA" a cargo del ```Grupo 2``` / Digital House
+
+### Descripción del sitio
+* PositiviTea es un Market Place de un negocio local dedicado a la venta de infusiones como té o cafe. Se podrán realizar ventas minoristas y mayoristas. 
+El sitio web apunta a aquel público mayor de edad apasionado por las infusiones 
 
 ### Sitios de referencia
 * Elegida por ser líder en el país en el hámbito del Ecommerce (Market Place)
