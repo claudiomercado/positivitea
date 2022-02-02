@@ -8,9 +8,9 @@ Proyecto "POSITIVITEA" a cargo del ```Grupo 2``` / Digital House
 
 * Sitios elegidos por la relacion con los productos que estaremos usando para el proyecto
 
-[Dolce Gusto](https://www.dolce-gusto.com.ar/ "Ir a Dolce Gusto")
-[Tea Shop](https://www.teashopargentina.com.ar/ "Ir a Tea Shop")
-[Medialunas Calentitas](https://medialunaslarioja.com.ar/ "Ir a Medialunas Calentitas")
+[Dolce Gusto](https://www.dolce-gusto.com.ar/ "Ir a Dolce Gusto") /
+[Tea Shop](https://www.teashopargentina.com.ar/ "Ir a Tea Shop") /
+[Medialunas Calentitas](https://medialunaslarioja.com.ar/ "Ir a Medialunas Calentitas") /
 [Freddo](https://freddo.com.ar/ "Ir a Freddo")
 
 ### Integrantes del equipo
