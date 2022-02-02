@@ -17,6 +17,17 @@ El sitio web apunta a aquel público mayor de edad apasionado por las infusiones
 [Medialunas Calentitas](https://medialunaslarioja.com.ar/ "Ir a Medialunas Calentitas") /
 [Freddo](https://freddo.com.ar/ "Ir a Freddo")
 
+### Colores usados
+* RGB => (109,180,110)
+* RGB => (75,151,77)
+
+### Tipografia
+* Wishbone Tea
+* Roboto (Google Fonts)
+
+### Logo
+* <img src="logo.jpeg" width="400px"> 
+
 ### Integrantes del equipo
 
 ```Mercado, Claudio```  
