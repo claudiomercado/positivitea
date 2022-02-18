@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cece3ed6e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+/////////
+/////////
+
+  <body>
+
+    <header>
+      <h3>PARTIAL DEL NAV BAR</h3>
+    </header>
+
+    ////////////
+    ///////////
+    ////////////
+///////////
+    <main>
+
+      <section>
+        <div class="registro">
+            <h4>REGISTRO</h4>
+            <form class="registro__form">
+                <label class="registro__form-usuario" for="Usuario">Usuario</label><br>
+                <input type="text" id="username" required oninvalid="this.setCustomValidity('Debes introducir un nombre de usuario')" oninput="this.setCustomValidity('')">
+                <br><br>
+
+                <label class="registro__form-email" for="email">Correo electronico</label><br>
+                <input type="email" id="email" required oninvalid="this.setCustomValidity('Deber introducir tu correo electronico')" oninput="this.setCustomValidity('')">
+                <br><br>
+
+                
+                <label class="registro__form-contrasena" for="contrasena">Contraseña</label><br>
+                <input type="password" id="password" required oninvalid="this.setCustomValidity('Deber introducir una contraseña')" oninput="this.setCustomValidity('')">
+                <br><br>
+              
+                <label class="registro__form-confirmarContrasena" for="contrasena">Confirmar contraseña</label><br>
+                <input type="password" id="password" required oninvalid="this.setCustomValidity('Deber confirmar la contraseña')" oninput="this.setCustomValidity('')">
+                <br><br>
+                
+                <input class="registro__form-botonContinuar" type="submit" value="Continuar">
+            </form>
+        </div>
+        <div class="cuentaYaCreada">
+            <a href="" class="cuentaYaCreada__iniciarSes">Iniciar Sesion</a>
+        </div>
+      </section>
+
+
+    </main>
+
+    ////////////
+    ///////////
+    ////////////
+///////////
+
+    <footer>
+      <section>
+        <h3>PARTIAL DEL FOOTER</h3>
+      </section>
+    </footer>
+
+////////////
+///////////
+
+  </body>
+</html>
