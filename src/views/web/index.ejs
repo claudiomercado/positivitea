@@ -12,17 +12,19 @@
 <body>
     <header>
         <nav class="nav-top">
-            <div>
+            <div class="nav-top-logo">
                 <img src="/img/logo.png" alt="PositiviTea" class="logo">
             </div>
-            <div class="botonera">
+            <div class="nav-top-botonera">
                 <a href="#" class="botonera-items">Inicio</a>
                 <a href="#" class="botonera-items">Productos</a>
                 <a href="#" class="botonera-items">Contacto</a>
                 <a href="#" class="botonera-items"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-            <div class="registros">
+            <div class="nav-top-buscador">
                 <input type="search"><i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="nav-top-registros">
                 <a href="#"><i class="fa-solid fa-user"></i></a>
                 <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </div>
@@ -56,16 +58,51 @@
             <span class="dot"></span> 
         </div>
     <main>
+        <h3>Productos Destacados</h3>
         <section class="destacados">
-            <h3>Productos Destacados</h3>
+            <article>
+                <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                <div class="articulo-contenido">
+                    <div class="articulo-venta">
+                        <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                    <h4 class="description">Té - Cola de Caballo</h4>
+                    <button class="ver_mas">Ver más</button>
+                </div>
+            </article>
+            <article>
+                <img width="100%" src="img/te_tila.jpg" alt="">
+                <div class="articulo-contenido">
+                    <div class="articulo-venta">
+                        <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                    <h4 class="description">Té - Tila</h4>
+                    <button class="ver_mas">Ver más</button>
+                </div>
+            </article>
+            <article>
+                <img width="100%" src="img/te_canela.jpg" alt="">
+                <div class="articulo-contenido">
+                    <div class="articulo-venta">
+                        <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                    <h4 class="description">Té - Canela</h4>
+                    <button class="ver_mas">Ver más</button>
+                </div>
+            </article>
+            <article>
+                <img width="100%" src="img/te_salvia.jpg" alt="">
+                <div class=articulo-contenido>
+                    <div class="articulo-venta">
+                        <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                    </div>
+                    <h4 class="description">Té - Salvia</h4>
+                    <button class="ver_mas">Ver más</button>
+                </div>
+            </article>
         </section>
     </main>
-    <hr>
-    <footer>
-        <section class="footer">
-            <h3>FOOTER</h3>
-        </section>
-    </footer>
+    <%- include(/partials/footer.ejs) %>
     <script>
         var slideIndex = 0;
         showSlides();

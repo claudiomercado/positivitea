@@ -1,16 +1,15 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const webRoutes = require('./routes/webRoutes');
+const webRoutes = require("./routes/web/webRoutes");
+const usersRoutes = require("./routes/users/usersRoutes");
+const productsRoutes = require("./routes/products/productsRoutes")
 
-/* const homeRoutes= require('./routes/home')
-const productDetailRoutes=require('./routes/productDetail') */
+app.set("view engine", "ejs"); 
 
-app.set('view engine', 'ejs');
-/* app.get("/", homeRoutes);
-app.get("/product", productDetailRoutes); */
-
-app.use('/',webRoutes)
+app.use("/", webRoutes);
+app.use("/", usersRoutes);      //*revisar la ruta, no se si "/" es la correcta
+app.use("/", productsRoutes);   //*revisar la ruta, no se si "/" es la correcta
 
 app.use(express.static("public"));
 
