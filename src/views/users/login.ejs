@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0cece3ed6e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+/////////
+/////////
+
+  <body>
+
+    <header>
+      <h3>PARTIAL DEL NAV BAR</h3>
+    </header>
+
+    ////////////
+    ///////////
+    ////////////
+///////////
+    <main>
+
+      <section>
+        <div class="inicioDeSesion">
+            <h4>INICIAR SESIÓN</h4>
+            <form class="inicioDeSesion__form">
+                <label class="inicioDeSesion__form-Usuario" for="Usuario">Usuario</label><br>
+                <input type="text" id="username" required oninvalid="this.setCustomValidity('Debes introducir tu nombre de usuario')" oninput="this.setCustomValidity('')">
+                <br><br>
+
+                <label class="inicioDeSesion__form-contrasena" for="contrasena">Contraseña</label><br>
+                <input type="password" id="password" required oninvalid="this.setCustomValidity('Deber introducir tu contraseña')" oninput="this.setCustomValidity('')">
+                <br><br>
+                
+                <input class="inicioDeSesion__form-submit" type="submit" value="Iniciar">
+            </form>
+        </div>
+        <div class="registroRecuperar">
+            <a href="" class="registroRecuperar__regist">Registrarse</a>
+            <a href="" class="registroRecuperar__recupe">¿Has olvidado la contraseña?</a>
+        </div>
+      </section>
+
+
+    </main>
+
+    ////////////
+    ///////////
+    ////////////
+///////////
+
+    <footer>
+      <section>
+        <h3>PARTIAL DEL FOOTER</h3>
+      </section>
+    </footer>
+
+////////////
+///////////
+
+  </body>
+</html>
