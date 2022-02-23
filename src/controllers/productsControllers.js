@@ -1,8 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  allProducts: (req, res) => { 
-    res.render(path.join(__dirname, "../views/products/allProducts"));
+  products: (req, res) => { 
+    res.render(path.join(__dirname, "../views/products/products"));
   }, //tdos los productos
   
 

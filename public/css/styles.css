@@ -11,6 +11,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+main{
+  margin-bottom: 30px;
+}
+
 .nav-top{
     background-color: #94cca5;
     display: flex;
@@ -128,10 +132,16 @@ body{
     font-size: 25px;
 }
 
-h3{
+h1{
     color: #4b974d;
+    font-size: 25px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
+}
+
+h3{
+  color: #4b974d;
+  font-size: 20px;
 }
 
 .destacados{
@@ -147,7 +157,7 @@ article{
   border: #4b974d 1px solid;
 }
 
-footer{
+.footer_container{
     display: flex;
     justify-content: space-around;
     background-color: #94cca5;
@@ -172,12 +182,81 @@ footer{
   font-size: 30px;
 }
 
+.footer_info{
+  color:#4b974d;
+  text-align: center;
+  background-color: #94cca5;
+  padding-bottom: 5px;
+}
+
 .fa-facebook, .fa-instagram-square, .fa-linkedin, .fa-whatsapp-square{
   padding: 10px;
 }
 
 h4{
+  margin-top: 0;
   color: #4b974d;
+}
+
+.contacto_container, .login_container, .registro_container{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.login_recuperar, .registro_iniciarsesion{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.login_recuperar_items, .registro_iniciarsesion_items{
+  color:#4b974d;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.ubicacion_container{
+  display: flex;
+  margin: 20px;
+}
+
+.ubicacion_mapa{
+  width: 60%;
+  padding: 5px;
+  margin: 10px;
+}
+
+.ubicacion_info{
+  display: block;
+  width: 40%;
+  margin: 10px;
+}
+
+.contacto_formulario, .login_formulario, .registro_formulario{
+  text-align: center;
+  width: 30%;
+}
+
+.contacto_formulario, .login_formulario, .registro_formulario{
+  display: block;
+  padding-top: 0;
+  padding-left: 15px;
+}
+
+.contacto_formulario_items, .login_formulario_items, .registro_formulario_items{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: #4b974d 1px solid;
+}
+
+.contacto_direccion, .contacto_telefono, .contacto_horarios{
+  margin: 5px;
+  padding-left: 15px;
+  border: #4b974d 1px solid;
 }
 
 .ver_mas{
@@ -190,4 +269,53 @@ h4{
   position: absolute;
   bottom: 10px;
   right: 20px;
+}
+
+.descubri{
+  margin-top: 5px;
+  background-color: #94cca5;
+  color: #4b974d;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contacto_formulario_enviar, .login_formulario_enviar, .registro_formulario_enviar{
+  background-color: #94cca5;
+  color: #4b974d;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.productos_slider{
+  width: 100%;
+  height: 300px;
+  border:#4b974d solid 1px;
+}
+
+.productos_nav{
+  margin: 20px;
+  text-align: center;
+}
+
+.productos_nav_items{
+  color: #4b974d;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.productos_random{
+  padding-top: 15px;
+  text-align: center;
+}
+
+.productos_slider_random{
+  margin: auto;
+  width: 800px;
+  height: 300px;
+  border: #4b974d solid 1px;
 }

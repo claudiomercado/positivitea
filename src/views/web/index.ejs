@@ -1,64 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Positivitea</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0cece3ed6e.js" crossorigin="anonymous"></script>
-</head>
+<%- include('../partials/head') %> 
 <body>
     <header>
-        <nav class="nav-top">
-            <div class="nav-top-logo">
-                <img src="/img/logo.png" alt="PositiviTea" class="logo">
-            </div>
-            <div class="nav-top-botonera">
-                <a href="#" class="botonera-items">Inicio</a>
-                <a href="#" class="botonera-items">Productos</a>
-                <a href="#" class="botonera-items">Contacto</a>
-                <a href="#" class="botonera-items"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-            <div class="nav-top-buscador">
-                <input type="search"><i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="nav-top-registros">
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-                <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-            </div>
-        </nav>
+        <%- include('../partials/header')  %>
     </header>
-        <div class="slideshow-container">
-            
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="/img/slider_001.jpg" style="width:100%">
-              <div class="text">Caption Text</div>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="/img/slider_002.jpg" style="width:100%">
-              <div class="text">Caption Two</div>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="/img/slider_003.jpg" style="width:100%">
-              <div class="text">Caption Three</div>
-            </div>
-            
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/img/slider_001.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
         </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/img/slider_002.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
         </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/img/slider_003.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+        
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
     <main>
-        <h3>Productos Destacados</h3>
+        <h1>Productos Destacados</h1>
         <section class="destacados">
             <article>
                 <img width="100%" src="img/te_coladecaballo.jpg" alt="">
@@ -102,27 +75,29 @@
             </article>
         </section>
     </main>
-    <%- include(/partials/footer.ejs) %>
     <script>
         var slideIndex = 0;
         showSlides();
-        
+
         function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
-        </script>
+    </script>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
 </body>
 </html>
