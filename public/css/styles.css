@@ -163,7 +163,7 @@ article{
   display: flex;
   justify-content: space-around;
   position: absolute;
-  background: #94cca5;;
+  background: #93C572;;
   height: 15%;
   width: 100%;
 }
@@ -178,12 +178,12 @@ article{
 }
 
 .footer__navegacion a:link {
-  color: green;
+  color:#005500;
   text-decoration: none;
 }
 
 .footer__navegacion a:visited {
-  color: green;
+  color:#005500;
   text-decoration: none;
 }
 
@@ -191,7 +191,7 @@ article{
   position: relative;
   top: 80%;
   font-size: 10px;
-  color: green;
+  color: #005500;
 }
 
 .footer__redes a {
