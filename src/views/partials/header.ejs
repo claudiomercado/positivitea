@@ -1,18 +1,17 @@
-<nav class="nav-top">
-    <div class="nav-top-logo">
-        <img src="/img/logo.png" alt="PositiviTea" class="logo">
+<nav class="navbar">
+    <div class="navbar__logo">
+        <img src="img/logo.png" alt="PositiviTea" class="logo">
     </div>
-    <div class="nav-top-botonera">
-        <a href="/" class="botonera-items">Inicio</a>
-        <a href="/products" class="botonera-items">Productos</a>
-        <a href="/contactUs" class="botonera-items">Contacto</a>
-        <a href="#" class="botonera-items"><i class="fa-solid fa-cart-shopping"></i></a>
+    <div class="navbar__button">
+        <a href="#" class="navbar__boton-home">• Inicio</a>
+        <a href="#" class="navbar__boton-productos">• Productos</a>
+        <a href="#" class="navbar__boton-contacto">• Contacto</a>
     </div>
-    <div class="nav-top-buscador">
-        <input type="search"><i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    <div class="nav-top-registros">
-        <a href="/register"><i class="fa-solid fa-user"></i></a>
-        <a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+    <form class="navbar__search">
+        <input type="search" name="search" class="navbar__search-bar" placeholder="Busqueda...">
+    </form>
+    <div class="navbar-user">
+        <a href="/login"><img src="img/icons/user.png"></a>
+        <a href="/register"><img src="img/icons/shopping-cart.png" alt=""></i></a>
     </div>
 </nav>

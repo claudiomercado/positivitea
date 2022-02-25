@@ -15,47 +15,63 @@ main{
   margin-bottom: 30px;
 }
 
-.nav-top{
-    background-color: #94cca5;
-    display: flex;
-}
-.nav-top-logo{
-    width: 20%;
-}
-
-.logo{
-    margin: 10px;
-    width: 280px;
-    height: auto;
-    padding: 10px;
+/*-----------HEADER--------------*/
+.navbar {
+  display: flex;
+  z-index: 1000;
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  background-color: #93c572;
 }
 
-.nav-top-botonera{
-    width: 50%;
-    padding-top: 80px;
-    text-align: center;
+.logo {
+  position: relative;
+  left: 60px;
+  top: 20px;
+  width: 200px;
 }
 
-.botonera-items{
-    margin: 10px;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #4b974d;
-    font-weight: bold;
+.navbar__button {
+  position: relative;
+  top: 80px;
+  left: 90px;
 }
 
-.nav-top-buscador{
-    width: 20%;
-    padding: 10px;
-    text-align: right;
+.navbar__button a {
+  padding: 0px 5px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.nav-top-registros{
-    width: 10%;
-    padding: 10px;
-    text-align: right;
+.navbar__button a:link,
+a:visited {
+  text-decoration: none;
+  color: #005500;
 }
+
+.navbar__search {
+  position: relative;
+  top: 30px;
+  left: -100px;
+}
+
+.navbar__search input {
+  position: relative;
+  width: 500px;
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+}
+
+.navbar-user a {
+  position: relative;
+  margin: 0px 5px;
+  top: 30px;
+  left: 75px;
+}
+/* ----FIN HEADER---------- */
 
 .mySlides {
     display: none;
