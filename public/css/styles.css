@@ -15,65 +15,47 @@ main{
   margin-bottom: 30px;
 }
 
-/*-----------HEADER--------------*/
-.navbar {
-  display: flex;
-  z-index: 1000;
-  position: relative;
-  background-color: #93c572;
-  height: 120px;
-  width: 100%;
+.nav-top{
+    background-color: #94cca5;
+    display: flex;
+}
+.nav-top-logo{
+    width: 20%;
 }
 
-.logo {
-  position: absolute;
-  left: 60px;
-  top: 20px;
-  width: 200px;
+.logo{
+    margin: 10px;
+    width: 280px;
+    height: auto;
+    padding: 10px;
 }
 
-.navbar__button {
-  position: absolute;
-  top: 80px;
-  left: 350px;
+.nav-top-botonera{
+    width: 50%;
+    padding-top: 80px;
+    text-align: center;
 }
 
-.navbar__button a {
-  padding: 0px 10px;
-  font-size: 18px;
-  font-weight: bold;
+.botonera-items{
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #4b974d;
+    font-weight: bold;
 }
 
-.navbar__button a:link,
-a:visited {
-  text-decoration: none;
-  color: #005500;
+.nav-top-buscador{
+    width: 20%;
+    padding: 10px;
+    text-align: right;
 }
 
-.navbar__search {
-  position: absolute;
-  top: 40%;
-  left: 50%;
+.nav-top-registros{
+    width: 10%;
+    padding: 10px;
+    text-align: right;
 }
-
-.navbar__search input {
-  position: absolute;
-  width: 500px;
-  height: 30px;
-  border-style: none;
-  border-radius: 5px;
-  padding: 6px 10px;
-}
-
-.navbar-user {
-  position: absolute;
-  top: 30px;
-  left: 90%;
-}
-.navbar-user a {
-  padding: 0px 5px;
-}
-/* ----FIN HEADER---------- */
 
 .mySlides {
     display: none;
@@ -175,54 +157,37 @@ article{
   border: #4b974d 1px solid;
 }
 
-
-/* FOOTER */
-.footer {
-  display: flex;
-  position: relative;
-  background: #93c572;
-  height: 100px;
-  width: 100%;
+.footer_container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #94cca5;
+    padding: 20px;
 }
 
-.footer__navegacion {
-  display: inline;
-  position: absolute;
-  top: 50%;
-  left: 15%;
-}
-.footer__navegacion a {
-  padding: 0px 5px;
-  font-size: 16px;
-  font-weight: bold;
+.footer_navegacion{
+  display: block;
 }
 
-.footer__navegacion a:link,
-a:visited {
-  color: #005500;
+.footer_botonera_items{
+  margin: 15px;
+  padding: 15px;
   text-decoration: none;
+  font-size: 20px;
+  color: #4b974d;
 }
 
-.footer__copyright {
-  position: absolute;
-  top: 75%;
-  left: 45%;
-}
-.footer__copyright h4 {
-  font-size: 12px;
-  color: #005500;
+.footer_redessociales{
+  padding: 20px;
+  color:#4b974d;
+  font-size: 30px;
 }
 
-.footer__redes {
-  position: absolute;
-  top: 50%;
-  left: 85%;
+.footer_info{
+  color:#4b974d;
+  text-align: center;
+  background-color: #94cca5;
+  padding-bottom: 5px;
 }
-
-.footer__redes a {
-  padding: 0px 2px;
-}
-/* FOOTER FIN */
 
 .fa-facebook, .fa-instagram-square, .fa-linkedin, .fa-whatsapp-square{
   padding: 10px;
@@ -306,6 +271,17 @@ h4{
   right: 20px;
 }
 
+.finalizar_compra{
+  margin-right: 100px;
+  background-color: #94cca5;
+  color: #4b974d;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 30px;
+}
+
 .descubri{
   margin-top: 5px;
   background-color: #94cca5;
@@ -350,7 +326,70 @@ h4{
 
 .productos_slider_random{
   margin: auto;
-  width: 800px;
-  height: 300px;
+  width: 20%;
+  height: auto;
   border: #4b974d solid 1px;
+}
+
+.producto_detalle_container{
+  border: #4b974d 1px solid;
+  width: 60%;
+  display: flex;
+  margin: auto;
+  padding: 20px;
+}
+
+.producto_detalle_imagen, .producto_detalle_info{
+  padding: 10px;
+}
+
+.carrito{
+  border: #4b974d 1px solid;
+  width: 80%;
+  margin: auto;
+}
+
+.carrito_container{
+  width: 90%;
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrito_producto_contador{
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito_contador_casilla, .carrito_contador_boton{
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  margin: 5px;
+}
+
+.carrito_producto_imagen{
+  width: 20%;
+}
+
+.carrito_producto_nombre{
+  width: 20%;
+}
+
+.carrito_finalizarcompra{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: right;
+}
+
+.carrito_finalizarcompra_items{
+  padding: 20px
+}
+
+.productos_articulo_random{
+  width: auto;
+  margin: 10px;
 }

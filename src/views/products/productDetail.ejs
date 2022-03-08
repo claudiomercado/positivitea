@@ -1,12 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/head') %> 
 <body>
-    <h1>Detalle de producto</h1>
+    <header>
+        <%- include('../partials/header')  %>
+    </header>
+    <main>
+        <h1>Productos</h1>
+        <div class="productos_nav">
+            <a href="#" class="productos_nav_items">Más Vendidos</a>
+            <a href="#" class="productos_nav_items">Categorías</a>
+            <a href="#" class="productos_nav_items">Ofertas</a>
+            <a href="#" class="productos_nav_items">Ofertas</a>
+        </div>
+        <div class="producto_detalle_container">
+            <div class="producto_detalle_imagen">
+                <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+            </div>
+            <div class="producto_detalle_info">
+                <h3>Té - Cola de Caballo</h3>
+                <h4>Precio: $ 6.770</h4>
+                <h4>Características:</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam facilis, voluptatem doloribus ab consequuntur, sed distinctio expedita inventore facere odit ipsum placeat? Recusandae saepe minus aliquam distinctio, quam quae autem.</p>
+                <h4>Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></h4>
+            </div>
+        </div>
+        <div class="productos_container">
+            <h1>Productos relacionados</h1>
+            <section class="destacados">
+                <article>
+                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Cola de Caballo</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_tila.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Tila</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_canela.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Canela</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_salvia.jpg" alt="">
+                    <div class=articulo-contenido>
+                        <div class="articulo-venta">
+                            <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Salvia</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+            </section>
+            <h1>Ofertas</h1>
+            <section class="destacados">
+                <article>
+                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Cola de Caballo</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_tila.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Tila</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_canela.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Canela</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_salvia.jpg" alt="">
+                    <div class=articulo-contenido>
+                        <div class="articulo-venta">
+                            <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Salvia</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
 </body>
 </html>

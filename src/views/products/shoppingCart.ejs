@@ -1,0 +1,148 @@
+<%- include('../partials/head') %> 
+<body>
+    <header>
+        <%- include('../partials/header')  %>
+    </header>
+    <main>
+        <h1>Mis compras</h1>
+        <div class="carrito">
+            <div class="carrito_container">
+                <div class="carrito_producto_imagen">
+                    <img width="100px" src="img/te_coladecaballo.jpg" alt="">
+                </div>
+                <div class="carrito_producto_nombre">
+                    <h3>Té - Cola de Caballo</h3>
+                </div>
+                <div class="carrito_producto_contador">
+                    <button class="carrito_contador_boton">+</button>
+                    <input type="text" class="carrito_contador_casilla">
+                    <button class="carrito_contador_boton">-</button>
+                </div>
+                <div class="carrito_producto_precioUnitario">
+                    <h4>Precio: $ 6.770</h4>
+                </div>
+                <div class="carrito_producto_eliminar">
+                    <input type="submit" name="carrito_eliminarProducto" id="" value="Eliminar">
+                </div>
+            </div>
+            <hr>
+            <div class="carrito_container">
+                <div class="carrito_producto_imagen">
+                    <img width="100px" src="img/te_tila.jpg" alt="">
+                </div>
+                <div class="carrito_producto_nombre">
+                    <h3>Té - Tila</h3>
+                </div>
+                <div class="carrito_producto_contador">
+                    <button class="carrito_contador_boton">+</button>
+                    <input type="text" class="carrito_contador_casilla">
+                    <button class="carrito_contador_boton">-</button>
+                </div>
+                <div class="carrito_producto_precioUnitario">
+                    <h4>Precio: $ 8.500</h4>
+                </div>
+                <div class="carrito_producto_eliminar">
+                    <input type="submit" name="carrito_eliminarProducto" id="" value="Eliminar">
+                </div>
+            </div>
+            <hr>
+            <div class="carrito_finalizarcompra">
+                <p class="carrito_finalizarcompra_items">TOTAL COMPRA: </p>
+                <P class="carrito_finalizarcompra_items">$ 15.270</P>
+                <button class="finalizar_compra">Finalizar compra</button>
+            </div>
+        </div>
+        <div class="productos_container">
+            <h1>Productos relacionados</h1>
+            <section class="destacados">
+                <article>
+                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Cola de Caballo</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_tila.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Tila</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_canela.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Canela</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_salvia.jpg" alt="">
+                    <div class=articulo-contenido>
+                        <div class="articulo-venta">
+                            <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Salvia</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+            </section>
+            <h1>Ofertas</h1>
+            <section class="destacados">
+                <article>
+                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Cola de Caballo</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_tila.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Tila</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_canela.jpg" alt="">
+                    <div class="articulo-contenido">
+                        <div class="articulo-venta">
+                            <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Canela</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+                <article>
+                    <img width="100%" src="img/te_salvia.jpg" alt="">
+                    <div class=articulo-contenido>
+                        <div class="articulo-venta">
+                            <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
+                        </div>
+                        <h4 class="description">Té - Salvia</h4>
+                        <button class="ver_mas">Ver más</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
