@@ -19,27 +19,27 @@ main{
 .navbar {
   display: flex;
   z-index: 1000;
-  position: absolute;
-  height: 20%;
-  width: 100%;
+  position: relative;
   background-color: #93c572;
+  height: 120px;
+  width: 100%;
 }
 
 .logo {
-  position: relative;
+  position: absolute;
   left: 60px;
   top: 20px;
   width: 200px;
 }
 
 .navbar__button {
-  position: relative;
+  position: absolute;
   top: 80px;
-  left: 90px;
+  left: 350px;
 }
 
 .navbar__button a {
-  padding: 0px 5px;
+  padding: 0px 10px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -51,13 +51,13 @@ a:visited {
 }
 
 .navbar__search {
-  position: relative;
-  top: 30px;
-  left: -100px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
 }
 
 .navbar__search input {
-  position: relative;
+  position: absolute;
   width: 500px;
   height: 30px;
   border-style: none;
@@ -65,11 +65,13 @@ a:visited {
   padding: 6px 10px;
 }
 
-.navbar-user a {
-  position: relative;
-  margin: 0px 5px;
+.navbar-user {
+  position: absolute;
   top: 30px;
-  left: 75px;
+  left: 90%;
+}
+.navbar-user a {
+  padding: 0px 5px;
 }
 /* ----FIN HEADER---------- */
 
@@ -177,47 +179,49 @@ article{
 /* FOOTER */
 .footer {
   display: flex;
-  justify-content: space-around;
-  position: absolute;
-  background: #93C572;;
-  height: 15%;
+  position: relative;
+  background: #93c572;
+  height: 100px;
   width: 100%;
 }
 
-.footer__navegacion a {
+.footer__navegacion {
   display: inline;
-  position: relative;
-  top: 60%;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+.footer__navegacion a {
   padding: 0px 5px;
   font-size: 16px;
   font-weight: bold;
 }
 
-.footer__navegacion a:link {
-  color:#005500;
+.footer__navegacion a:link,
+a:visited {
+  color: #005500;
   text-decoration: none;
 }
 
-.footer__navegacion a:visited {
-  color:#005500;
-  text-decoration: none;
+.footer__copyright {
+  position: absolute;
+  top: 75%;
+  left: 45%;
 }
-
 .footer__copyright h4 {
-  position: relative;
-  top: 80%;
-  font-size: 10px;
+  font-size: 12px;
   color: #005500;
 }
 
-.footer__redes a {
-  position: relative;
-  padding: 0px 4px;
-  top: 60%;
-  font-size: 16px;
-  font-weight: bold;
+.footer__redes {
+  position: absolute;
+  top: 50%;
+  left: 85%;
 }
 
+.footer__redes a {
+  padding: 0px 2px;
+}
 /* FOOTER FIN */
 
 .fa-facebook, .fa-instagram-square, .fa-linkedin, .fa-whatsapp-square{
