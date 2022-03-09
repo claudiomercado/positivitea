@@ -1,4 +1,4 @@
-Retrospectiva del proyecto 'PositiviTea'
+Analisis del proyecto 'PositiviTea' utilizando la metodologia Starfish retrospective
 
 ->Start Doing<-
 Entre las cosas que queremos comenzar a implementar esta aplicar un poco más de estilo a nuestra página y experimentar un poco más con CSS, aun nos falta también dinamismo, como menús desplegables y responsive design. En cuanto adquiramos más conocimiento sobre JS tenemos ganas de comenzar a automatizar un poco nuestro ecommerce
