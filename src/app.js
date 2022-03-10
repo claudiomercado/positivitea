@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const webRoutes = require("./routes/web/webRoutes");
-const usersRoutes = require("./routes/users/usersRoutes");
-const productsRoutes = require("./routes/products/productsRoutes")
+const webRoutes = require("./routes/webRoutes");
+const usersRoutes = require("./routes/usersRoutes");
+const productsRoutes = require("./routes/productsRoutes")
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));

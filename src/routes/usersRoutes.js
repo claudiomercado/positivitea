@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const usersControllers = require("../../controllers/usersControllers");
+const usersControllers = require("../controllers/usersControllers");
 
 
 router.get("/login", usersControllers.login);

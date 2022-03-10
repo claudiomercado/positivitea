@@ -30,91 +30,37 @@
             <button class="descubri">Descubrí</button>
         </div>
         <div class="productos_container">
-            <h1>Productos recomendados</h1>
+            <h1>Productos Recomendados</h1>
             <section class="destacados">
-                <article>
-                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
-                    <div class="articulo-contenido">
-                        <div class="articulo-venta">
-                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                <% products.forEach(function(producto) { 
+                    if(producto.category == 'recomendado'){%>
+                    <article>
+                        <img width="100%" src="img/<%= producto.image  %> " alt="">
+                        <div class="articulo-contenido">
+                            <div class="articulo-venta">
+                                <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                            <h4 class="description"><%= producto.name  %></h4>
+                            <button class="ver_mas">Ver más</button>
                         </div>
-                        <h4 class="description">Té - Cola de Caballo</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
-                <article>
-                    <img width="100%" src="img/te_tila.jpg" alt="">
-                    <div class="articulo-contenido">
-                        <div class="articulo-venta">
-                            <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
-                        </div>
-                        <h4 class="description">Té - Tila</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
-                <article>
-                    <img width="100%" src="img/te_canela.jpg" alt="">
-                    <div class="articulo-contenido">
-                        <div class="articulo-venta">
-                            <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
-                        </div>
-                        <h4 class="description">Té - Canela</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
-                <article>
-                    <img width="100%" src="img/te_salvia.jpg" alt="">
-                    <div class=articulo-contenido>
-                        <div class="articulo-venta">
-                            <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
-                        </div>
-                        <h4 class="description">Té - Salvia</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
+                    </article>
+                <% }}); %>
             </section>
             <h1>Ofertas</h1>
             <section class="destacados">
-                <article>
-                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
-                    <div class="articulo-contenido">
-                        <div class="articulo-venta">
-                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                <% products.forEach(function(producto) { 
+                    if(producto.category == 'oferta'){%>
+                    <article>
+                        <img width="100%" src="img/<%= producto.image  %> " alt="">
+                        <div class="articulo-contenido">
+                            <div class="articulo-venta">
+                                <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
+                            </div>
+                            <h4 class="description"><%= producto.name  %></h4>
+                            <button class="ver_mas">Ver más</button>
                         </div>
-                        <h4 class="description">Té - Cola de Caballo</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
-                <article>
-                    <img width="100%" src="img/te_tila.jpg" alt="">
-                    <div class="articulo-contenido">
-                        <div class="articulo-venta">
-                            <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
-                        </div>
-                        <h4 class="description">Té - Tila</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
-                <article>
-                    <img width="100%" src="img/te_canela.jpg" alt="">
-                    <div class="articulo-contenido">
-                        <div class="articulo-venta">
-                            <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
-                        </div>
-                        <h4 class="description">Té - Canela</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
-                <article>
-                    <img width="100%" src="img/te_salvia.jpg" alt="">
-                    <div class=articulo-contenido>
-                        <div class="articulo-venta">
-                            <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
-                        </div>
-                        <h4 class="description">Té - Salvia</h4>
-                        <button class="ver_mas">Ver más</button>
-                    </div>
-                </article>
+                    </article>
+                <% }}); %>
             </section>
         </div>
     </main>
