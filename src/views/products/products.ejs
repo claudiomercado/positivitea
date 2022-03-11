@@ -4,6 +4,7 @@
         <%- include('../partials/header')  %>
     </header>
     <main>
+       
 <!--         <div class="productos_slider">
             <h1>Slider de Productos</h1>
         </div> -->
@@ -52,7 +53,7 @@
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <form action="/products/productDetail/<%= producto.id%>">
+                            <form action="/productDetail/<%= producto.id%>">
                             <button class="ver_mas" >Ver más</button>
                         </form>
                         </div>
@@ -77,7 +78,7 @@
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <form action="/products/productDetail/<%= producto.id%>">
+                            <form action="productDetail/<%= producto.id%>">
                                 <button class="ver_mas" >Ver más</button>
                             </form>
                         </div>

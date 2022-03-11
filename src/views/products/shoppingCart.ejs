@@ -11,7 +11,7 @@
                 <div class="carrito_producto_imagen">
                     <% products.forEach(function(producto) {%>
                         <% if(producto.id==1){%>
-                    <img width="100px" src= <%= producto.image%> alt="">
+                    <img width="100px" src= "<%= producto.image%>" alt="">
                 </div>
                 <div class="carrito_producto_nombre">
                     <h3><%= producto.name%></h3>
@@ -107,14 +107,14 @@
                     <div>
                             <% if(producto.category == 'oferta'){%>
                                 <article>
-                    <img width="100%" src= <%=producto.image%> alt="">
+                    <img width="100%" src="<%=producto.image%>" alt="">
 
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <form action="/products/productDetail/<%= producto.id%>">
+                            <form action="/productDetail/<%= producto.id%>">
                                 <button class="ver_mas" >Ver más</button>
                             </form>
                         </div>

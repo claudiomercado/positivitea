@@ -10,7 +10,7 @@ app.use(express.static("public"));
 
 app.use("/", webRoutes);
 app.use("/", usersRoutes);      //*revisar la ruta, no se si "/" es la correcta
-app.use("/products", productsRoutes);   //*revisar la ruta, no se si "/" es la correcta
+app.use("/", productsRoutes);   //*revisar la ruta, no se si "/" es la correcta
 
 app.listen(3030, () => {
   console.log("Servidor corriendo");

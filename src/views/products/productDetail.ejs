@@ -4,6 +4,8 @@
         <%- include('../partials/header')  %>
     </header>
     <main>
+        
+            
         <h1>Productos</h1>
         <div class="productos_nav">
             <a href="#" class="productos_nav_items">Más Vendidos</a>
@@ -16,7 +18,7 @@
                 <% if(idProduct== producto.id){ %>
                    
             <div class="producto_detalle_imagen">
-                <img width="100%" src=<%= producto.image%> alt="">
+                <img width="100%" src="/<%= producto.image%>" alt="">
             </div>
             <div class="producto_detalle_info">
                 <h3><%= producto.name%></h3>
@@ -32,7 +34,7 @@
             <h1>Productos relacionados</h1>
             <section class="destacados">
                 <article>
-                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <img width="100%" src="/img/te_coladecaballo.jpg" alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -43,7 +45,7 @@
                     </div>
                 </article>
                 <article>
-                    <img width="100%" src="img/te_tila.jpg" alt="">
+                    <img width="100%" src="/img/te_tila.jpg" alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -53,7 +55,7 @@
                     </div>
                 </article>
                 <article>
-                    <img width="100%" src="img/te_canela.jpg" alt="">
+                    <img width="100%" src="/img/te_canela.jpg" alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -63,7 +65,7 @@
                     </div>
                 </article>
                 <article>
-                    <img width="100%" src="img/te_salvia.jpg" alt="">
+                    <img width="100%" src="/img/te_salvia.jpg" alt="">
                     <div class=articulo-contenido>
                         <div class="articulo-venta">
                             <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -79,7 +81,7 @@
                     <div>
                             <% if(producto.category == 'oferta'){%>
                                 <article>
-                        <img width="100%" src=<%= producto.image%> alt="">
+                        <img width="100%" src="/<%= producto.image%>" alt="">
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
