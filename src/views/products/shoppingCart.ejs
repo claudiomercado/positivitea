@@ -11,7 +11,7 @@
                 <div class="carrito_producto_imagen">
                     <% products.forEach(function(producto) {%>
                         <% if(producto.id==1){%>
-                    <img width="100px" src= "<%= producto.image%>" alt="">
+                    <img width="100px" src= "/<%= producto.image%>" alt="">
                 </div>
                 <div class="carrito_producto_nombre">
                     <h3><%= producto.name%></h3>
@@ -33,7 +33,7 @@
             <hr>
             <div class="carrito_container">
                 <div class="carrito_producto_imagen">
-                    <img width="100px" src="img/te_tila.jpg" alt="">
+                    <img width="100px" src="/img/te_tila.jpg" alt="">
                 </div>
                 <div class="carrito_producto_nombre">
                     <h3>Té - Tila</h3>
@@ -61,7 +61,7 @@
             <h1>Productos relacionados</h1>
             <section class="destacados">
                 <article>
-                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <img width="100%" src="/img/te_coladecaballo.jpg" alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -71,7 +71,7 @@
                     </div>
                 </article>
                 <article>
-                    <img width="100%" src="img/te_tila.jpg" alt="">
+                    <img width="100%" src="/img/te_tila.jpg" alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$8.500  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -81,7 +81,7 @@
                     </div>
                 </article>
                 <article>
-                    <img width="100%" src="img/te_canela.jpg" alt="">
+                    <img width="100%" src="/img/te_canela.jpg" alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$7.200  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -91,7 +91,7 @@
                     </div>
                 </article>
                 <article>
-                    <img width="100%" src="img/te_salvia.jpg" alt="">
+                    <img width="100%" src="/img/te_salvia.jpg" alt="">
                     <div class=articulo-contenido>
                         <div class="articulo-venta">
                             <p class="precio">$6.200  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -107,14 +107,14 @@
                     <div>
                             <% if(producto.category == 'oferta'){%>
                                 <article>
-                    <img width="100%" src="<%=producto.image%>" alt="">
+                    <img width="100%" src="/<%=producto.image%>" alt="">
 
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <form action="/productDetail/<%= producto.id%>">
+                            <form action="/products/productDetail/<%= producto.id%>">
                                 <button class="ver_mas" >Ver más</button>
                             </form>
                         </div>
