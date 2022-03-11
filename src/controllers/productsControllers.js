@@ -14,10 +14,11 @@ module.exports = {
 	},
   
   productDetail: (req, res) => {
-    res.render(path.join(__dirname, "../views/products/productDetail"));
+    let idProduct= req.params.id
+    res.render(path.join(__dirname, "../views/products/productDetail"), {products, toThousand,idProduct});
   }, //detalle de un producto
 
   shoppingCart: (req, res) => {
-    res.render(path.join(__dirname, "../views/products/shoppingCart"));
+    res.render(path.join(__dirname, "../views/products/shoppingCart"), {products,toThousand});
   }, //carro de compras
 };

@@ -260,8 +260,9 @@ h4{
 }
 
 .ver_mas{
-  background-color: #94cca5;
-  color: #4b974d;
+  background-color: #4b974d;
+  color: white;
+  /*color: #4b974d;*/
   border: none;
   font-size: 15px;
   padding: 5px;
@@ -269,12 +270,13 @@ h4{
   position: absolute;
   bottom: 10px;
   right: 20px;
+  cursor: pointer;
 }
 
 .finalizar_compra{
   margin-right: 100px;
-  background-color: #94cca5;
-  color: #4b974d;
+  background-color: #4b974d;
+  color: white;
   border: none;
   font-size: 15px;
   font-weight: bold;
@@ -284,8 +286,8 @@ h4{
 
 .descubri{
   margin-top: 5px;
-  background-color: #94cca5;
-  color: #4b974d;
+  background-color: #4b974d;
+  color: white;
   border: none;
   font-size: 15px;
   padding: 10px;
@@ -293,8 +295,8 @@ h4{
 }
 
 .contacto_formulario_enviar, .login_formulario_enviar, .registro_formulario_enviar{
-  background-color: #94cca5;
-  color: #4b974d;
+  background-color: #4b974d;
+  color: white;
   border: none;
   font-size: 15px;
   padding: 10px;

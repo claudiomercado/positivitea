@@ -7,61 +7,86 @@
 <!--         <div class="productos_slider">
             <h1>Slider de Productos</h1>
         </div> -->
+        
         <h1>Productos</h1>
         <div class="productos_nav">
             <a href="#" class="productos_nav_items">Más Vendidos</a>
             <a href="#" class="productos_nav_items">Categorías</a>
             <a href="#" class="productos_nav_items">Ofertas</a>
-            <a href="#" class="productos_nav_items">Ofertas</a>
         </div>
         <div class="productos_random">
             <h3>¿No sabés qué comprar?</h3>
+            <% let aleatorio=Math.floor(Math.random()*(8-1+1)+1) %>
+            
             <div class="productos_slider_random">
+                
                 <article class="productos_articulo_random">
-                    <img width="100%" src="img/te_coladecaballo.jpg" alt="">
+                    <% products.forEach(function(producto) {%>
+                    <% if(aleatorio==producto.id){%>
+                    <img width="100%" src=<%= producto.image%> alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
-                            <p class="precio">$6.770  - <i class="fa-solid fa-cart-shopping"></i></p>
+                            <p class="precio">$<%= producto.price%>  - <i class="fa-solid fa-cart-shopping"></i></p>
                         </div>
-                        <h4 class="description">Té - Cola de Caballo</h4>
+                        <h4 class="description"><%= producto.name%></h4>
                     </div>
+                    <% } %>
+                    <%});%>
                 </article>
+                
             </div>
+            
             <button class="descubri">Descubrí</button>
         </div>
         <div class="productos_container">
             <h1>Productos Recomendados</h1>
+            
             <section class="destacados">
-                <% products.forEach(function(producto) { 
-                    if(producto.category == 'recomendado'){%>
-                    <article>
-                        <img width="100%" src="img/<%= producto.image  %> " alt="">
+                 <% products.forEach(function(producto) {%>
+                    <div>
+                            <% if(producto.category == 'recomendado'){%>
+                                <article>
+                        <img width="100%" src=<%= producto.image%> alt="">
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <button class="ver_mas">Ver más</button>
+                            <form action="/products/productDetail/<%= producto.id%>">
+                            <button class="ver_mas" >Ver más</button>
+                        </form>
                         </div>
                     </article>
-                <% }}); %>
+                        <% } %>
+                        
+                    
+                </div>
+                <%});%>
             </section>
+            
             <h1>Ofertas</h1>
+            
             <section class="destacados">
-                <% products.forEach(function(producto) { 
-                    if(producto.category == 'oferta'){%>
-                    <article>
-                        <img width="100%" src="img/<%= producto.image  %> " alt="">
+                <% products.forEach(function(producto) {%>
+                    <div>
+                            <% if(producto.category == 'oferta'){%>
+                                <article>
+                        <img width="100%" src=<%= producto.image%> alt="">
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <button class="ver_mas">Ver más</button>
+                            <form action="/products/productDetail/<%= producto.id%>">
+                                <button class="ver_mas" >Ver más</button>
+                            </form>
                         </div>
                     </article>
-                <% }}); %>
-            </section>
+                <% } %>
+            </div>
+            
+            <%});%>
+        </section>
         </div>
     </main>
     <footer>

@@ -36,7 +36,7 @@
             <% products.forEach(function(producto) { 
                 if(producto.category == 'recomendado'){%>
                 <article>
-                    <img width="100%" src="img/<%= producto.image  %> " alt="">
+                    <img width="100%" src= <%= producto.image%>  alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
