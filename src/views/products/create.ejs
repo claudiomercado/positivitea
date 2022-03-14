@@ -1,0 +1,25 @@
+<%- include('../partials/head') %> 
+<body>
+    <header>
+        <%- include('../partials/header')  %>
+    </header>
+    <main>
+        <div class="contacto_formulario">
+            <h4>Agrega un producto</h4>
+            <form action="/products/create" method="POST">
+                <input type="text" name="name" id="name" placeholder="Nombre de producto " class="contacto_formulario_items">
+                <input type="number" name="price" id="price" placeholder="Precio " class="contacto_formulario_items">
+                <select name="category" id="category">
+                    <option value="recomendado">Recomendado</option>
+                    <option value="oferta">Oferta</option>
+                </select>
+                <textarea name="description" id="description" cols="30" rows="2" placeholder="Descripción" class="contacto_formulario_items"></textarea>
+                <input type="text" name="image" placeholder="imagen">
+                <input type="submit" class="contacto_formulario_enviar" value="Guardar">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>

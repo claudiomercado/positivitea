@@ -1,0 +1,29 @@
+<%- include('../partials/head') %> 
+<body>
+    <header>
+        <%- include('../partials/header')  %>
+    </header>
+    <main>
+        <div class="contacto_formulario">
+            <% products.forEach(function(producto) {%>
+                <% if(idProductEdit == producto.id){ %> 
+            <h4>Editando el producto <%= producto.name%></h4>
+            
+            <form action="/products/update?_method=PUT" method="POST">
+                <input type="text" name="name" id="name" value="<%= producto.name%>" class="contacto_formulario_items">
+                <input type="number" name="price" id="price" value="<%= producto.price%>" class="contacto_formulario_items">
+                <select name="category" id="category" value="<%= producto.category%>">
+                    <option value="recomendado">Recomendado</option>
+                    <option value="oferta">Oferta</option>
+                </select>
+                <textarea name="description" id="description" cols="30" rows="2" value="<%= producto.description%>" class="contacto_formulario_items"></textarea>
+                <input type="text" name="image" value="<%= producto.image%>">
+                <input type="submit" class="contacto_formulario_enviar" value="Guardar">
+            </form>
+            <%}})%>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>

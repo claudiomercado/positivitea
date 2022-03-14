@@ -1,0 +1,35 @@
+<%- include('../partials/head') %> 
+<body>
+    <header>
+        <%- include('../partials/header')  %>
+    </header>
+    <main>
+        <form action="/products/create" method="get">
+            <button>Crear</button>
+        </form>
+        
+        <table>
+            <thead>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Descripcion</th>
+                <th>Imagen</th>
+                <td colspan="2">Accion</td>
+            </thead>
+            <tbody>
+                <% products.forEach(function(producto) {%>
+                    <tr>
+                <td><%= producto.name %></td>
+                <td>$ <%= producto.price %></td>
+                <td><%= producto.category %></td>
+                <td><%= producto.description %></td>
+                <td><img style="width:20% ;" src="/<%= producto.image %>" alt=""></td>
+                <td><a href="/products/edit/<%= producto.id%>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
+                <td><i class="fa-solid fa-trash-can"></i></td>
+            </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>

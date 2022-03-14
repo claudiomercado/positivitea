@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Maria Ines",
+        "last_name": "Toledo",
+        "email": "mariainestoledo20397@gmail.com",
+        "password": "123456",
+        "category": "admin",
+        "image": "img/user1.png"
+    },
+    {
+        "id": 2,
+        "name": "Gillermo",
+        "last_name": "Miller",
+        "email": "guillermomiller@gmail.com",
+        "password": "123456",
+        "category": "admin",
+        "image": "img/user2.png"
+    },
+    {
+        "id": 3,
+        "name": "Jaun",
+        "last_name": "Miranda",
+        "email": "juanmiranda@gmail.com",
+        "password": "123456",
+        "category": "admin",
+        "image": "img/user3.png"
+    }
+]
