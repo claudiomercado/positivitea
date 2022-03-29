@@ -16,16 +16,16 @@ module.exports = {
     if (resultValidation.errors.length > 0) {
       res.render(path.join(__dirname, "../views/users/login"),{errors: resultValidation.mapped(), oldData: req.body})
     }else{
-      let archivoUser= fs.readFileSync(userFilePath,{encoding:'utf-8'})
-      let archivoUserParse=JSON.parse(archivoUser)
-      let imgAvatar
-      let nameAvatar
+      
       let result=[]
       let userLogin={
         email: req.body.email,
         password: req.body.password
        }
-      
+       let archivoUser= fs.readFileSync(userFilePath,{encoding:'utf-8'})
+       let archivoUserParse=JSON.parse(archivoUser)
+       let imgAvatar
+       let nameAvatar
 
       for (const data in archivoUserParse) {
         if (archivoUserParse[data].email==userLogin.email && archivoUserParse[data].password == userLogin.password) {
@@ -53,7 +53,8 @@ module.exports = {
   }, //registro
   save:(req,res)=>{
     const resultValidation=validationResult(req)
-
+    let imgAvatar
+    let nameAvatar
     if (resultValidation.errors.length > 0) {
       res.render(path.join(__dirname, "../views/users/register"),{errors: resultValidation.mapped(), oldData: req.body})
     }else{
@@ -65,7 +66,8 @@ module.exports = {
         confirmPassword: req.body.confirmPassword,
         avatar:req.file
        }
-  
+       imgAvatar=user.avatar.filename
+       nameAvatar=user.username
        //leemos los usuarios ya registrador
        let archivoUser= fs.readFileSync(userFilePath,{encoding:'utf-8'})
        let usuarios
@@ -81,7 +83,8 @@ module.exports = {
       fs.writeFileSync(userFilePath,usuariosJSON)
       console.log('Usuario creado');
    
-       res.redirect('/')
+      res.render(path.join(__dirname, "../views/web/index"), {products,imgAvatar,nameAvatar, toThousand})
+
     }
     
 
