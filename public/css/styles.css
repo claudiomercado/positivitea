@@ -1,6 +1,39 @@
 * {
     box-sizing: border-box;
 }
+.form-control {
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 10px 0px !important;
+  margin-bottom: 10px !important;
+  border: none !important;
+  border-bottom: #4b974d 1px solid !important;
+}
+.registro_formulario_items{
+  display: block !important;
+  width: 100% !important;
+  padding: 10px 10px 0px  !important;
+  margin-bottom: 10px !important;
+  border: none !important;
+}
+.text-danger{
+  color: red;
+  text-align: left;
+  padding: 0px 5px;
+  font-size: 15px;
+}
+.text-danger-invalid{
+  
+  color: red;
+  text-align: left;
+  padding: 0px 5px;
+  font-size: 15px;
+  text-align: center;
+  
+}
+.text-danger-invalid p{
+  margin: 4px;
+}
 #menu ul{
   display: flex;
   justify-content: space-around;
@@ -42,6 +75,9 @@
 #btn{
   display: none;
 }
+#btnUser{
+  display: none;
+}
 #btn:checked + label > ul{
   display: block;
   flex-direction: column;
@@ -54,6 +90,37 @@
  padding: 20px 0;
  z-index: 10;
 }
+#btnUser:checked + label > ul{
+  list-style: none;
+  display: block;
+  flex-direction: column;
+  position:absolute;
+ top:10%;
+ right: 0.2%;
+ background:rgb(153, 148, 148);
+ padding:20px 0;
+ width: 70px;
+ padding: 20px 0;
+ z-index: 10;
+}
+#desplegableName {
+  display: none;
+}
+#name{
+  list-style: none;
+
+}
+#desplegableName li{
+  text-align: center;
+  
+}
+#desplegableName li a{
+  text-decoration: none;
+  color: white;
+}
+/*#desplegableName li:hover{
+  background: rgb(199, 190, 190);
+}*/
 /* #menu ul ul{
  display: none;
   
@@ -249,7 +316,7 @@ article{
   border: #4b974d 1px solid;
 }
 .footer{
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -340,7 +407,7 @@ h4{
   padding-left: 15px;
 }
 
-.contacto_formulario_items, .login_formulario_items, .registro_formulario_items{
+.contacto_formulario_items, .login_formulario_items{
   display: block;
   width: 100%;
   padding: 10px;

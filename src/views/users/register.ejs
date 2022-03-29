@@ -7,17 +7,79 @@
         <h1>Registro</h1>
         <div class="registro_container">
           <div class="registro_formulario">
-            <form action="" method="post">
-              <input type="text" id="username" class="registro_formulario_items" placeholder="Usuario: " required oninvalid="this.setCustomValidity('Debes introducir un nombre de usuario')" oninput="this.setCustomValidity('')">
-              <input type="email" id="email" class="registro_formulario_items" placeholder="Email: " required oninvalid="this.setCustomValidity('Debes introducir tu correo electronico')" oninput="this.setCustomValidity('')">
-              <input type="password" id="password" class="registro_formulario_items" placeholder="Contraseña: " required oninvalid="this.setCustomValidity('Debes introducir una contraseña')" oninput="this.setCustomValidity('')">
-              <input type="password" id="password" class="registro_formulario_items" placeholder="Confirmar contraseña: " required oninvalid="this.setCustomValidity('Debes confirmar la contraseña')" oninput="this.setCustomValidity('')">
-              <input class="registro_formulario_enviar" type="submit" value="Enviar">
+            <form action="/register" method="post" enctype="multipart/form-data">
+
+
+              <input 
+              type="text" 
+              name="username" 
+              class=" form-control <% if(locals.errors && errors.username){%>
+                <%= 'is-invalid'%>
+                <% } %>"
+              placeholder="Usuario "  
+              value="<%= locals.oldData? oldData.username : null %>"
+              >
+             <% if(locals.errors && errors.username){%>
+              <div class="text-danger">
+                <p><%= errors.username.msg%></p>
+             </div>
+             <%}%>
+
+              <input 
+              type="text" 
+              name="email" 
+              class="form-control <% if(locals.errors && errors.email){%>
+                <%= 'is-invalid'%>
+                <% } %>" 
+              placeholder="Email "  
+              value="<%= locals.oldData? oldData.email : null %>">
+              <% if(locals.errors && errors.email){%>
+                <div class="text-danger">
+                  <p><%= errors.email.msg%></p>
+               </div>
+               <%}%>
+
+              <input 
+              type="password" 
+              name="password" 
+              class="form-control <% if(locals.errors && errors.password){%>
+                <%= 'is-invalid'%>
+                <% } %>" 
+               
+              placeholder="Contraseña " >
+              <% if(locals.errors && errors.password){%>
+                <div class="text-danger">
+                  <p><%= errors.password.msg%></p>
+               </div>
+               <%}%>
+
+              <input 
+              type="password" 
+              name="confirmPassword" 
+              class="form-control <% if(locals.errors && errors.confirmPassword){%>
+                <%= 'is-invalid'%>
+                <% } %>" 
+                
+              placeholder="Confirmar contraseña " >
+              <% if(locals.errors && errors.confirmPassword){%>
+                <div class="text-danger">
+                  <p><%= errors.confirmPassword.msg%></p>
+               </div>
+               <%}%>
+                
+              <input type="file" name="avatar" id="avatar" class="registro_formulario_items">
+              <% if(locals.errors && errors.avatar){%>
+                <div class="text-danger">
+                  <p><%= errors.avatar.msg%></p>
+               </div>
+               <%}%>
+              <input class="registro_formulario_enviar" type="submit" value="Registrarme">
+             
             </form>
           </div>
         </div>
         <div class="registro_iniciarsesion">
-          <a href="#" class="registro_iniciarsesion_items">Iniciar Sesión</a>
+          <a href="#" class="registro_iniciarsesion_items">¿Ya tenés cuenta? Inicia Sesión</a>
         </div>
     </main>
     <footer>

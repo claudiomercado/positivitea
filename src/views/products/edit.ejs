@@ -9,7 +9,7 @@
                 <% if(idProductEdit == producto.id){ %> 
             <h4>Editando el producto <%= producto.name%></h4>
             
-            <form action="/products/update?_method=PUT" method="POST">
+            <form action="/products/edit/<%= producto.id%>?_method=PUT" method="POST">
                 <input type="text" name="name" id="name" value="<%= producto.name%>" class="contacto_formulario_items">
                 <input type="number" name="price" id="price" value="<%= producto.price%>" class="contacto_formulario_items">
                 <select name="category" id="category" value="<%= producto.category%>">

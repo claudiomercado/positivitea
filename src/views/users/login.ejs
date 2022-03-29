@@ -7,10 +7,45 @@
         <h1>Iniciar Sesión</h1>
         <div class="login_container">
             <div class="login_formulario">
-                <form action="" method="post">
-                    <input type="text" name="usuario" id="usuario" placeholder="Usuario: " class="login_formulario_items">
-                    <input type="password" name="password" id="password" placeholder="Contraseña: " class="login_formulario_items">
-                    <button type="button" class="login_formulario_enviar">Ingresar</button>
+                <form action="/login" method="POST">
+                    <% if(locals.invalid ){%>
+                        <div class="text-danger-invalid">
+                          <p><%= invalid%></p>
+                          <p><%= invalid2%></p>
+                       </div>
+                       <%}%>
+
+                    <input 
+                    type="text" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Email " 
+                    class="form-control <% if(locals.errors && errors.email){%>
+                        <%= 'is-invalid'%>
+                        <% } %>" >
+                    <% if(locals.errors && errors.email){%>
+                        <div class="text-danger">
+                          <p><%= errors.email.msg%></p>
+                       </div>
+                       <%}%>
+
+
+                    <input 
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    placeholder="Contraseña " 
+                    class="form-control <% if(locals.errors && errors.password){%>
+                        <%= 'is-invalid'%>
+                        <% } %>" >
+                    <% if(locals.errors && errors.password){%>
+                        <div class="text-danger">
+                          <p><%= errors.password.msg%></p>
+                       </div>
+                       <%}%>
+
+                    <input class="login_formulario_enviar" type="submit" value="Ingresar">
+
                 </form>
             </div>
         </div>

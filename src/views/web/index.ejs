@@ -1,8 +1,13 @@
 <%- include('../partials/head') %> 
 <body>
     <header>
-        <%- include('../partials/header')  %>
+        <%if(locals.imgAvatar){%>
+        <%- include('../partials/header',{imgAvatar,nameAvatar})  %>
+        <%}else{%>
+            <%- include('../partials/header')  %>
+            <%}%>
     </header>
+    
     <div class="slideshow-container">
         
         <div class="mySlides fade">
@@ -32,6 +37,9 @@
     </div>
     <main>
         <h1>Productos Recomendados</h1>
+        
+            
+         
         <section class="destacados">
             <% products.forEach(function(producto) { 
                 if(producto.category == 'recomendado'){%>
