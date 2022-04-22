@@ -11,6 +11,7 @@ module.exports = {
     
     res.render(path.join(__dirname, "../views/users/login"));
   }, //logueo
+  
   processLogin: (req,res) => {
     const resultValidation=validationResult(req)
     if (resultValidation.errors.length > 0) {
