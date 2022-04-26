@@ -6,6 +6,7 @@ const users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productsDataBase.json'), 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {validationResult}=require('express-validator');
+
 module.exports = {
   login: (req, res) => {
     

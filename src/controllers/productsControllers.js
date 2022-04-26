@@ -47,7 +47,9 @@ module.exports = {
     
   },
   list:(req,res)=>{
-    db.Products.findAll()
+    db.Products.findAll({
+      include:[{association:'category_product'}]
+    })
       .then((product)=>{
         res.render(path.join(__dirname,'../views/products/list'), {product,toThousand})
       })
