@@ -15,21 +15,24 @@
             <a href="#" class="productos_nav_items">Ofertas</a>
         </div>-->
         <div class="producto_detalle_container">
-            <% products.forEach(function(producto) {%>
-                <% if(idProduct== producto.id){ %>
+        
+
+            
+                
                    
             <div class="producto_detalle_imagen">
-                <img width="100%" src="/<%= producto.image%>" alt="">
+                <img width="100%" src="/<%= product.img%>" alt="">
             </div>
             <div class="producto_detalle_info">
-                <h3><%= producto.name%></h3>
-                <h4>Precio: $ <%= producto.price%></h4>
+                <h3><%= product.name%></h3>
+                <h4>Precio: $ <%= product.price%></h4>
                 <h4>Características:</h4>
-                <p><%= producto.description%></p>
+                <p><%= product.description%></p>
                 <h4>Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></h4>
             </div>
-            <%}%>
-            <%});%>
+           
+            
+
         </div>
         <div class="productos_container">
             <h1>Productos relacionados</h1>
@@ -76,28 +79,7 @@
                     </div>
                 </article>
             </section>
-            <h1>Ofertas</h1>
-            <section class="destacados">
-                <% products.forEach(function(producto) {%>
-                    <div>
-                            <% if(producto.category == 'oferta'){%>
-                                <article>
-                        <img width="100%" src="/<%= producto.image%>" alt="">
-                        <div class="articulo-contenido">
-                            <div class="articulo-venta">
-                                <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
-                            </div>
-                            <h4 class="description"><%= producto.name  %></h4>
-                            <form action="/products/productDetail/<%= producto.id%>">
-                                <button class="ver_mas" >Ver más</button>
-                            </form>
-                        </div>
-                    </article>
-                <% } %>
-            </div>
             
-            <%});%>
-            </section>
         </div>
     </main>
     <footer>

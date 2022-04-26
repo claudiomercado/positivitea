@@ -5,22 +5,24 @@
     </header>
     <main>
         <div class="contacto_formulario">
-            <% products.forEach(function(producto) {%>
-                <% if(idProductEdit == producto.id){ %> 
-            <h4>Editando el producto <%= producto.name%></h4>
             
-            <form action="/products/edit/<%= producto.id%>?_method=PUT" method="POST">
-                <input type="text" name="name" id="name" value="<%= producto.name%>" class="contacto_formulario_items">
-                <input type="number" name="price" id="price" value="<%= producto.price%>" class="contacto_formulario_items">
-                <select name="category" id="category" value="<%= producto.category%>">
-                    <option value="recomendado">Recomendado</option>
-                    <option value="oferta">Oferta</option>
+            <h4>Editando el producto <%= product.name%></h4>
+            
+            <form action="/products/edit/<%= product.id%>?_method=PUT" method="POST">
+                <input type="text" name="name" id="name" value="<%= product.name%>" class="contacto_formulario_items">
+                <input type="number" name="price" id="price" value="<%= product.price%>" class="contacto_formulario_items">
+                <select name="category" id="category" >
+                    <% if(product.id_category == 1){ %>
+                    <option value="1">Recomendado</option>
+                    <% } else {%>
+                    <option value="2">Oferta</option>
+                    <% } %>
                 </select>
-                <textarea name="description" id="description" cols="30" rows="2" value="<%= producto.description%>" class="contacto_formulario_items"></textarea>
-                <input type="text" name="image" value="<%= producto.image%>">
+                <textarea name="description" id="description" cols="30" rows="2" value="<%= product.description%>" class="contacto_formulario_items"></textarea>
+                <input type="text" name="image" value="<%= product.img%>">
                 <input type="submit" class="contacto_formulario_enviar" value="Guardar">
             </form>
-            <%}})%>
+            
         </div>
     </main>
     <footer>

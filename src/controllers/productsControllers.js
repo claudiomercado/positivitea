@@ -4,6 +4,7 @@ const rutaJSON= require('../data/productsDataBase.json')
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const usersControllers = require("../controllers/usersControllers");
+let db = require('../../database/models')
 
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -11,12 +12,17 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   //Home de productos
   products: (req, res) => {
-		res.render(path.join(__dirname, "../views/products/products"), {products, toThousand})
+    db.Products.findAll()
+      .then((product)=>{
+		res.render(path.join(__dirname, "../views/products/products"), {product, toThousand})
+      })
 	},
   
   productDetail: (req, res) => {
-    let idProduct= req.params.id
-    res.render(path.join(__dirname, "../views/products/productDetail"), {products, toThousand,idProduct});
+    db.Products.findByPk(req.params.id)
+      .then((product)=>{
+        res.render(path.join(__dirname, "../views/products/productDetail"), {product, toThousand});
+      })
   }, //detalle de un producto
 
   shoppingCart: (req, res) => {
@@ -27,122 +33,57 @@ module.exports = {
     res.render(path.join(__dirname,'../views/products/create'))
   },
   save:(req,res)=>{
-    let product={
-     // id:uuid(),
+    db.Products.create({
       name: req.body.name ,
-      price: req.body.price,
-      category: req.body.category,
       description: req.body.description,
-      image: req.body.image
-    }
-    //leemos los productos ya registrador
-    let archivoProduct= fs.readFileSync(path.join(__dirname,'../data/productsDataBase.json'),{encoding:'utf-8'})
-    let productos
-    if (archivoProduct =="") {
-       productos=[]
-    }else{
-       productos= JSON.parse(archivoProduct)
-    }
-
-    productos.push(product)
-
-   productosJSON= JSON.stringify(productos)
-   fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),productosJSON)
-
-    res.render(path.join(__dirname,'../views/products/list'), {products,toThousand})
-
+      price: req.body.price,
+      img: req.body.image,
+      id_category: req.body.category
+    })
+    db.Products.findAll()
+      .then((product)=>{
+          res.render(path.join(__dirname,'../views/products/list'), {product,toThousand})
+      })
+    
   },
   list:(req,res)=>{
-    res.render(path.join(__dirname,'../views/products/list'), {products,toThousand})
+    db.Products.findAll()
+      .then((product)=>{
+        res.render(path.join(__dirname,'../views/products/list'), {product,toThousand})
+      })
+    
   },
   edit:(req,res)=>{
-    let idProductEdit=req.params.id
-    res.render(path.join(__dirname,'../views/products/edit'), {products,toThousand,idProductEdit})
+    db.Products.findByPk(req.params.id)
+      .then((product)=>{
+        res.render(path.join(__dirname,'../views/products/edit'), {product,toThousand})
+      })
+    
   },
   update:(req,res)=>{
-    const id = req.params.id;
-    const productOrig = rutaJSON.find((prod) => prod.id.toString() === id);
-
-    const input = req.body;
-
-    const newProduct = {
-      ...input,
-      id: productOrig.id,
-      image: productOrig.image
-    };
-    async (data)=>{
-      let productsJSON = rutaJSON.map(product=>{
-        if (product.id== data.id) {
-          product = data
-        }
-        return product
-      })
-      await fs.writeFile(
-        path.resolve(__dirname, rutaJSON),
-        JSON.stringify(productsJSON),
-        function (err) {
-          if (err) {
-            console.log(err);
-            return;
-          }
-          console.log('LISTO');
-        }
-      );
-    }
-
-    //updateProduct(newProduct);
-  /*  let productEdit
-    let productEditSave
-    let idProductEdit=req.params.id
- productEdit={
-  name: req.body.name ,
-      price: req.body.price,
-      category: req.body.category,
+    db.Products.update({
+      name: req.body.name ,
       description: req.body.description,
-      image: req.body.image
-}
-    let archivoProduct= fs.readFileSync(path.join(__dirname,'../data/productsDataBase.json'),{encoding:'utf-8'})
-    
-      let archivoProductJSON= JSON.parse(archivoProduct)
-      archivoProductJSON.map(current=>{
-        if (current.id==idProductEdit) {
-          
-          current.name=productEdit.name
-          current.price=productEdit.price
-          current.category=productEdit.category
-          current.description=productEdit.description
-          current.image=productEdit.image
-          
-        }
-        productEditSave=JSON.stringify(current)
-        console.log(productEditSave);
-        fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),productEditSave)
-        
-      })
-      */
+      price: req.body.price,
+      img: req.body.image,
+      id_category: req.body.category
+    },
+    {
+      where: {id:req.params.id }
+    })
+    db.Products.findAll()
+      .then((product)=>{
+        res.render(path.join(__dirname,'../views/products/list'), {product,toThousand})
+      })   
       
-      res.render(path.join(__dirname,'../views/products/list'), {products,toThousand})
   },
   delete:(req,res)=>{
-    let idProductEdit=req.params.id
-    
-    let archivoProduct= fs.readFileSync(path.join(__dirname,'../data/productsDataBase.json'),{encoding:'utf-8'})
-    
-   // let archivoProductJSON= JSON.parse(archivoProduct)
-   archivoProduct.foreach(current=>{
-      if (current.id==idProductEdit) {
-        let borrar={
-          name:current.name,
-          price: current.price,
-          category: current.category,
-          description:current.description,
-          image: current.image
-        }
-        archivoProductJSON.splice(borrar)
-        
-      }
-     
+    db.Products.destroy({
+      where:{id:req.params.id}
     })
-    res.send('Es delete')
+    db.Products.findAll()
+      .then((product)=>{
+        res.render(path.join(__dirname,'../views/products/list'), {product,toThousand})
+      })  
   }
 };

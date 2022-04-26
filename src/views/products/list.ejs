@@ -18,13 +18,13 @@
                 <td colspan="2">Accion</td>
             </thead>
             <tbody>
-                <% products.forEach(function(producto) {%>
+                <% product.forEach(function(producto) {%>
                     <tr>
                 <td><%= producto.name %></td>
                 <td>$ <%= producto.price %></td>
                 <td><%= producto.category %></td>
                 <td><%= producto.description %></td>
-                <td><img style="width:20% ;" src="/<%= producto.image %>" alt=""></td>
+                <td><img style="width:20% ;" src="/<%= producto.img %>" alt=""></td>
                 <td><a href="/products/edit/<%= producto.id%>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
                 <form action="/products/delete/<%= producto.id%>?_method=DELETE" method="post">
                 <td><button><i class="fa-solid fa-trash-can"></i></button></td>

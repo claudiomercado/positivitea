@@ -41,10 +41,10 @@
             
          
         <section class="destacados">
-            <% products.forEach(function(producto) { 
-                if(producto.category == 'recomendado'){%>
+            <% product.forEach(function(producto) { 
+                if(producto.id_category == 1){%>
                 <article>
-                    <img width="100%" src= <%= producto.image%>  alt="">
+                    <img width="100%" src= <%= producto.img%>  alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>

@@ -23,9 +23,9 @@
             <div class="productos_slider_random">
                 
                 <article class="productos_articulo_random">
-                    <% products.forEach(function(producto) {%>
+                    <% product.forEach(function(producto) {%>
                     <% if(aleatorio==producto.id){%>
-                    <img width="100%" src=<%= producto.image%> alt="">
+                    <img width="100%" src=<%= producto.img%> alt="">
                     <div class="articulo-contenido">
                         <div class="articulo-venta">
                             <p class="precio">$<%= producto.price%>  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -44,11 +44,11 @@
             <h1>Productos Recomendados</h1>
             
             <section class="destacados">
-                 <% products.forEach(function(producto) {%>
+                 <% product.forEach(function(producto) {%>
                     <div>
-                            <% if(producto.category == 'recomendado'){%>
+                            <% if(producto.id_category == 1){%>
                                 <article>
-                        <img width="100%" src=<%= producto.image%> alt="">
+                        <img width="100%" src=<%= producto.img%> alt="">
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
@@ -69,19 +69,20 @@
             <h1>Ofertas</h1>
             
             <section class="destacados">
-                <% products.forEach(function(producto) {%>
+                <% product.forEach(function(producto) {%>
                     <div>
-                            <% if(producto.category == 'oferta'){%>
+                            <% if(producto.id_category == 2){%>
                                 <article>
-                        <img width="100%" src=<%= producto.image%> alt="">
+                        <img width="100%" src=<%= producto.img%> alt="">
                         <div class="articulo-contenido">
                             <div class="articulo-venta">
                                 <p class="precio">$ <%= producto.price  %>  - <i class="fa-solid fa-cart-shopping"></i></p>
                             </div>
                             <h4 class="description"><%= producto.name  %></h4>
-                            <form action="/products/productDetail/<%= producto.id%>">
-                                <button class="ver_mas" >Ver más</button>
-                            </form>
+                            
+                                <a href="/products/productDetail/<%= producto.id%>" class="ver_mas">Ver más</a>
+                               <!-- <form action="/products/productDetail/">
+                            </form>-->
                         </div>
                     </article>
                 <% } %>
