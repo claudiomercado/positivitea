@@ -1,58 +1,58 @@
 <mxfile host="65bd71144e">
     <diagram id="WiAvk2CFmx-7B1jgrcfD" name="Page-1">
-        <mxGraphModel dx="592" dy="357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="714" dy="228" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <object label="products&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;id &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(100)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;description&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&amp;nbsp;TEXT&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;price&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&amp;nbsp;INT(10)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;img &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(100)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_category&lt;/u&gt; &lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&lt;/span&gt;&lt;/div&gt;" id="2">
-                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
                         <mxGeometry x="80" y="40" width="140" height="140" as="geometry"/>
                     </mxCell>
                 </object>
                 <object label="category_products&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;id &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(100)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="3">
-                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
                         <mxGeometry x="350" y="60" width="140" height="100" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="4" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.866;entryDx=0;entryDy=0;endFill=0;entryPerimeter=0;" edge="1" parent="1" source="3" target="2">
+                <mxCell id="4" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.866;entryDx=0;entryDy=0;endFill=0;entryPerimeter=0;" parent="1" source="3" target="2" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="330" y="130" as="sourcePoint"/>
                         <mxPoint x="280" y="180" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <object label="users&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;id &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;surname&amp;nbsp;&lt;span style=&quot;font-weight: 400&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;email&lt;span style=&quot;font-weight: normal&quot;&gt;&amp;nbsp;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;password&lt;span style=&quot;font-weight: normal&quot;&gt; VARCHAR(45)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;address&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;phone&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;avatar&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_city&lt;/u&gt; &lt;span style=&quot;font-weight: normal&quot;&gt;INT(11)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_province&lt;/u&gt;&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(11)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_rol&lt;/u&gt;&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(11)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" id="5">
-                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                <object label="users&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;idUsers&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;surname&amp;nbsp;&lt;span style=&quot;font-weight: 400&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;email&lt;span style=&quot;font-weight: normal&quot;&gt;&amp;nbsp;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;password&lt;span style=&quot;font-weight: normal&quot;&gt; VARCHAR(45)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;address&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;phone&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;avatar&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_city&lt;/u&gt; &lt;span style=&quot;font-weight: normal&quot;&gt;INT(11)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_province&lt;/u&gt;&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(11)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;u&gt;id_rol&lt;/u&gt;&amp;nbsp;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(11)&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" id="5">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
                         <mxGeometry x="80" y="220" width="160" height="200" as="geometry"/>
                     </mxCell>
                 </object>
-                <object label="city&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;id &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="6">
-                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                <object label="city&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;idCity&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="6">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
                         <mxGeometry x="350" y="240" width="140" height="100" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="7" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="6" target="5">
+                <mxCell id="7" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;endFill=0;" parent="1" source="6" target="5" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="330" y="310" as="sourcePoint"/>
                         <mxPoint x="280" y="360" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <object label="province&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;id &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="8">
-                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                <object label="province&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;idProvince&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(45)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="8">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
                         <mxGeometry x="350" y="360" width="140" height="100" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="9" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.027;entryY=0.873;entryDx=0;entryDy=0;endFill=0;entryPerimeter=0;" edge="1" parent="1" target="5" source="8">
+                <mxCell id="9" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.027;entryY=0.873;entryDx=0;entryDy=0;endFill=0;entryPerimeter=0;" parent="1" source="8" target="5" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="330" y="430" as="sourcePoint"/>
                         <mxPoint x="240" y="490" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <object label="rol&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;id &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(100)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="10">
-                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+                <object label="rol&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;idRol&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;INT(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;name &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;VARCHAR(100)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" id="10">
+                    <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
                         <mxGeometry x="350" y="480" width="140" height="100" as="geometry"/>
                     </mxCell>
                 </object>
-                <mxCell id="11" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.027;entryY=0.964;entryDx=0;entryDy=0;endFill=0;entryPerimeter=0;" edge="1" parent="1" target="5" source="10">
+                <mxCell id="11" value="" style="endArrow=ERoneToMany;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.027;entryY=0.964;entryDx=0;entryDy=0;endFill=0;entryPerimeter=0;" parent="1" source="10" target="5" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="330" y="550" as="sourcePoint"/>
                         <mxPoint x="240" y="610" as="targetPoint"/>
